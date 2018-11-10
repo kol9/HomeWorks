@@ -1,0 +1,108 @@
+import java.io.IOException;
+import java.io.DataInputStream;
+
+public class FastScanner {
+    final private int BUFFER_SIZE = (1 << 11);
+    private DataInputStream din;
+    private byte[] buffer;
+    private int bufferPointer, bytesRead;
+    private boolean canRead;
+    private boolean endOfLine;
+    String file_name = "a.in";
+    public FastScanner() {
+        din = new DataInputStream(System.in);
+        buffer = new byte[BUFFER_SIZE];
+        bufferPointer = 0;
+        bytesRead = 0;
+        canRead = true;
+        endOfLine = false;
+    }
+    public FastScanner(String file_name){
+        din = new DataInputStream(System.in);
+        buffer = new byte[BUFFER_SIZE];
+        bufferPointer = 0;
+        bytesRead = 0;
+        canRead = true;
+        endOfLine = false;
+    }
+    private void fillBuffer() throws IOException {
+        bytesRead = din.read(buffer, bufferPointer = 0, BUFFER_SIZE);
+        if (bytesRead == -1) {
+            buffer[0] = -1;
+            canRead = false;
+            close();
+        }
+    }
+
+    private byte read() throws IOException {
+        if (bufferPointer == bytesRead) {
+            fillBuffer();
+        }
+        return buffer[bufferPointer++];
+    }
+
+
+    public String nextLine() throws IOException {
+        StringBuilder s = new StringBuilder();
+        while (!endOfLine) {
+            s.append(nextBlock());
+            if (bufferPointer == bytesRead) {
+                fillBuffer();
+            }
+        }
+        s.deleteCharAt(s.length() - 1);
+        endOfLine = false;
+        return s.toString();
+    }
+
+    private String nextBlock() throws IOException {
+        int c, st = bufferPointer, cnt = 0;
+
+        while (bufferPointer != bytesRead && (c = read()) != -1) {
+            if (c == '\n') {
+                cnt++;
+                endOfLine = true;
+                return new String(buffer, st, cnt);
+            }
+            cnt++;
+        }
+
+        return new String(buffer, st, cnt);
+    }
+
+    public int nextInt() throws IOException {
+        int res = 0;
+        byte c = read();
+
+        while (c != ' ') {
+            c = read();
+        }
+
+        boolean isNegative = ((char) c == '-');
+
+        if (isNegative) {
+            c = read();
+        }
+
+        do {
+            res = res * 10 + c - '0';
+        } while ((c = read()) >= '0' && c <= '9');
+        System.out.println(res);
+        if (isNegative) {
+            return -res;
+        } else
+            return res;
+    }
+
+    public boolean hasNext() {
+        return canRead;
+    }
+
+    public void close() throws IOException {
+        if (din == null) {
+            return;
+        }
+        din.close();
+    }
+
+}

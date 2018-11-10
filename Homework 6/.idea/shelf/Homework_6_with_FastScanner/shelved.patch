@@ -1,0 +1,210 @@
+Index: src/FastScanner.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/FastScanner.java	(date 1541502156000)
++++ src/FastScanner.java	(date 1541502156000)
+@@ -0,0 +1,78 @@
++import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils;
++
++import java.io.*;
++import java.nio.charset.Charset;
++import java.util.ArrayList;
++import java.util.Arrays;
++import java.util.List;
++import java.util.StringTokenizer;
++
++public class FastScanner implements AutoCloseable {
++    private StringTokenizer st;
++    private BufferedReader br;
++
++    FastScanner(InputStream s) {
++        br = new BufferedReader(new InputStreamReader(s));
++    }
++
++    FastScanner(File s, Charset x) throws FileNotFoundException, IOException {
++        br = new BufferedReader(new InputStreamReader(new FileInputStream(s), x));
++    }
++
++    public String next() throws IOException {
++        while (hasNext()) {
++            st = new StringTokenizer(br.readLine());
++        }
++        return st.nextToken();
++    }
++
++    public boolean hasNext() throws IOException {
++        return (st != null && st.hasMoreTokens());
++    }
++
++    public int nextInt() throws IOException {
++        return Integer.parseInt(next());
++    }
++
++    public long nextLong() throws IOException {
++        return Long.parseLong(next());
++    }
++
++    public double nextDouble() throws IOException {
++        return Double.parseDouble(next());
++    }
++
++    public String nextLine() throws IOException {
++        return br.readLine();
++    }
++
++    public List<Integer> nextIntLineList() throws IOException, NumberFormatException {
++        List<Integer> numbers = new ArrayList<>();
++        String x = nextLine();
++
++        if (x == null) {
++            return null;
++        }
++
++        for (String numStr : x.split("[^\\d-]")) {
++            if (numStr.length() != 0) {
++                numbers.add(Integer.parseInt(numStr));
++            }
++        }
++        return numbers;
++    }
++
++    public List<String> nextWordLine() throws IOException {
++        String line = nextLine();
++        return new ArrayList<>(Arrays.asList(line.toLowerCase().split("[^\\p{L}\\p{Pd}']")));
++    }
++
++    boolean hasNextLine() throws IOException {
++        return br.ready();
++    }
++
++    @Override
++    public void close() throws IOException {
++        br.close();
++    }
++}
+\ No newline at end of file
+Index: src/WordStatLineIndex.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/WordStatLineIndex.java	(date 1541502132000)
++++ src/WordStatLineIndex.java	(date 1541502132000)
+@@ -0,0 +1,52 @@
++import javafx.util.Pair;
++import java.io.File;
++import java.io.FileNotFoundException;
++import java.io.FileWriter;
++import java.io.IOException;
++import java.nio.charset.StandardCharsets;
++import java.util.*;
++
++public class WordStatLineIndex {
++    public static void main(String args[]) {
++
++        Map<String, List<Pair<Integer, Integer>>> map = new TreeMap<>();
++        try (FastScanner scan = new FastScanner(new File(args[0]), StandardCharsets.UTF_8)) {
++
++            int wordId = 1;
++            int lineId = 1;
++            while (scan.hasNextLine()) {
++                List<String> words = scan.nextWordLine();
++                for (String word : words) {
++                    if (!word.isEmpty()) {
++                        if (!map.containsKey(word)) {
++                            map.put(word, new ArrayList<>());
++                        }
++                        map.get(word).add(new Pair<>(lineId, wordId++));
++                    }
++                }
++                lineId++;
++                wordId = 1;
++            }
++
++        } catch (FileNotFoundException e) {
++            e.printStackTrace();
++        } catch (IOException e) {
++            e.printStackTrace();
++        }
++
++        try (FileWriter out = new FileWriter(args[1])) {
++            Set<Map.Entry<String, List<Pair<Integer, Integer>>>> set = map.entrySet();
++
++            for (Map.Entry<String, List<Pair<Integer, Integer>>> current : set) {
++                out.write(current.getKey() + " " + current.getValue().size());
++                for (Pair<Integer, Integer> id : current.getValue()) {
++                    out.write(" " + id.getKey() + ":" + id.getValue());
++                }
++                out.write("\n");
++            }
++        } catch (IOException e) {
++            e.printStackTrace();
++        }
++
++    }
++}
+\ No newline at end of file
+Index: src/WordStatIndex.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/WordStatIndex.java	(date 1540896730000)
++++ src/WordStatIndex.java	(date 1540896730000)
+@@ -0,0 +1,53 @@
++import java.io.File;
++import java.io.FileWriter;
++import java.nio.charset.Charset;
++import java.nio.charset.StandardCharsets;
++import java.io.IOException;
++import java.util.*;
++
++public class WordStatIndex {
++
++
++    public static void main(String args[]) {
++        //final Charset encoding = StandardCharsets.UTF_8;
++
++        Map<String, ArrayList<Integer>> map = new LinkedHashMap<>();
++
++        try (FastScanner scan = new FastScanner(new File(args[0]), StandardCharsets.UTF_8)) {
++            int wordId = 1;
++            while (scan.hasNextLine()) {
++
++                List<String> words;
++                words = scan.nextWordLine();
++
++                for (String word : words) {
++                    if (!word.isEmpty()) {
++                        if (!map.containsKey(word)) {
++                            map.put(word, new ArrayList<>());
++                        }
++                        map.get(word).add(wordId++);
++                    }
++                }
++            }
++
++        } catch (Exception e) {
++            e.printStackTrace();
++        }
++
++        try (FileWriter out = new FileWriter(args[1])) {
++
++            Set<Map.Entry<String, ArrayList<Integer>>> set = map.entrySet();
++
++            for (Map.Entry<String, ArrayList<Integer>> current : set) {
++                out.write(current.getKey() + " " + current.getValue().size());
++                for (int id : current.getValue()) {
++                    out.write(" " + id);
++                }
++                out.write("\n");
++            }
++        } catch (IOException e) {
++            e.printStackTrace();
++        }
++
++    }
++}
+\ No newline at end of file
