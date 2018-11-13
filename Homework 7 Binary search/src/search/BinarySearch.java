@@ -34,15 +34,15 @@ public class BinarySearch {
 
     }
 
-    public int RecursiveBinarySearch(int left, int right) {
+        private int RecursiveBinarySearch(List<Integer> array, int left, int right, int x) {
         if (left > right) {
             return left;
         }
         int middle = (left + right) >>> 1;
         if (array.get(middle) > x) {
-            return RecursiveBinarySearch(left + 1, right);
+            return RecursiveBinarySearch(array, left + 1, right, x);
         } else {
-            return RecursiveBinarySearch(left + 1, right);
+            return RecursiveBinarySearch(array, left + 1, right, x);
         }
     }
 }
