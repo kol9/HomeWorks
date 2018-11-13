@@ -6,6 +6,7 @@ import java.util.List;
 /**
  * Created by Nikolay Yarlychenko on 13/11/2018
  */
+
 public class BinarySearchMissing {
     public static void main(String[] args) {
         int x = Integer.parseInt(args[0]);
@@ -15,37 +16,60 @@ public class BinarySearchMissing {
         }
 
         int left = 0, right = array.size() - 1;
-        System.out.println(IterationBinarySearch(array, left, right, x));
+        System.out.println(IterativeBinarySearch(array, left, right, x));
     }
 
-    public static int IterationBinarySearch(List<Integer> array, int left, int right, int x) {
+    private static int IterativeBinarySearch(List<Integer> array, int left, int right, int x) {
+        // x >= -2147483648 && x <= 2147483647
+        // left <= right
         while (left <= right) {
-            int mid = (left + right) >>> 1;
+            // left <= right
+            int mid = (left + right) / 2;
+            // left <= mid <= right
+            // 0 <= mid < array.size()
             if (array.get(mid) > x) {
+                // x to the right of mid
+                // left <= mid
                 left = mid + 1;
+                // left > mid
             } else {
+                // x to the left of mid
+                // right >= mid
                 right = mid - 1;
+                // right' > mid
             }
         }
+        // left > right
+        // left >= 0
         if (left > array.size() - 1 || array.get(left) != x) {
+            // x not found or array is empty
             return -(left + 1);
         } else {
+            // x found
             return left;
         }
     }
 
     private static int RecursiveBinarySearch(List<Integer> array, int left, int right, int x) {
         if (left > right) {
+            // left >= 0
             if (left > array.size() - 1 || array.get(left) != x) {
+                // x not found or array is empty
                 return -(left + 1);
             } else {
+                // x found
                 return left;
             }
         }
-        int mid = (left + right) >>> 1;
+        // left <= right
+        int mid = (left + right) / 2;
+        // left <= mid <= right
+        // 0 <= mid < array.size()
         if (array.get(mid) > x) {
+            // x to the right of mid
             return RecursiveBinarySearch(array, left + 1, right, x);
         } else {
+            // x to the left of mid
             return RecursiveBinarySearch(array, left, right - 1, x);
         }
     }
