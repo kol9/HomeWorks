@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08289f99-eb2a-406e-9484-f864cf59139a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/search/BinarySearchMissing.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BinarySearchMissing.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/search/BinarySearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/search/BinarySearch.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -26,25 +28,25 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="7" />
+          <entry key="java" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="7" />
+          <entry key="JAVA" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="ft" value="60" />
-          <entry key="java" value="2122" />
-          <entry key="txt" value="231" />
+          <entry key="java" value="2798" />
+          <entry key="txt" value="288" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="2122" />
-          <entry key="PLAIN_TEXT" value="231" />
+          <entry key="JAVA" value="2798" />
+          <entry key="PLAIN_TEXT" value="288" />
           <entry key="VTL" value="60" />
         </counts>
       </usages-collector>
@@ -62,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/search/BinarySearch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -72,10 +74,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
+        <entry file="file://$PROJECT_DIR$/src/search/BinarySearchMissing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="1900" column="35" selection-start-line="1900" selection-start-column="35" selection-end-line="1900" selection-end-column="35" />
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,6 +101,7 @@
       <find>Integer</find>
       <find>BinarySe</find>
       <find>a</find>
+      <find>middle</find>
       <find>Binary</find>
     </findStrings>
     <replaceStrings>
@@ -103,6 +109,7 @@
       <replace>left</replace>
       <replace>long</replace>
       <replace>Long</replace>
+      <replace>mid</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -123,6 +130,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/BinarySearch.java" />
         <option value="$PROJECT_DIR$/src/search/lab.java" />
+        <option value="$PROJECT_DIR$/src/BinarySearchMissing.java" />
+        <option value="$PROJECT_DIR$/src/search/BinarySearchMissing.java" />
         <option value="$PROJECT_DIR$/src/search/BinarySearch.java" />
       </list>
     </option>
@@ -183,7 +192,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542093051711" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1542095462772" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -201,11 +210,11 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.BinarySearchMissing">
     <configuration name="BinarySearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="search.BinarySearch" />
       <module name="Homework 7 Binary search" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;-2147483648&quot; &quot;5&quot; &quot;4&quot; &quot;3&quot; &quot;2&quot; &quot;1&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;0&quot; &quot;0&quot;" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="search.*" />
@@ -216,8 +225,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="BinarySearchMissing" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="search.BinarySearchMissing" />
+      <module name="Homework 7 Binary search" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;0&quot; &quot;0&quot;" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="search.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.BinarySearch" />
+      <item itemvalue="Application.BinarySearchMissing" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.BinarySearchMissing" />
         <item itemvalue="Application.BinarySearch" />
       </list>
     </recent_temporary>
@@ -236,7 +264,7 @@
       <workItem from="1541839356614" duration="247000" />
       <workItem from="1541841933722" duration="4863000" />
       <workItem from="1541849351434" duration="852000" />
-      <workItem from="1541877944481" duration="6109000" />
+      <workItem from="1541877944481" duration="8547000" />
     </task>
     <task id="LOCAL-00001" summary="Made new BinarySearch.java">
       <created>1541837839796</created>
@@ -329,17 +357,24 @@
       <option name="project" value="LOCAL" />
       <updated>1542054524473</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Good version of Binary search with recursion version">
+      <created>1542093102290</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1542093102290</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14510000" />
+    <option name="totallyTimeSpent" value="16948000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2639485" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -354,10 +389,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32891566" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.32771084" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32891566" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32891566" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -384,16 +419,10 @@
     <MESSAGE value="Sad" />
     <MESSAGE value="Deleted non-useful folders" />
     <MESSAGE value="Wrote beta version of BinarySearch(With many cruthces)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Wrote beta version of BinarySearch(With many cruthces)" />
+    <MESSAGE value="Good version of Binary search with recursion version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Good version of Binary search with recursion version" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="1900" column="35" selection-start-line="1900" selection-start-column="35" selection-end-line="1900" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/search/lab.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -404,10 +433,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="2543" column="13" selection-start-line="2543" selection-start-column="13" selection-end-line="2543" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/search/BinarySearchMissing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/search/BinarySearch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="42" column="30" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

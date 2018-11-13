@@ -4,12 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Nikolay Yarlychenko on 10/11/2018
+ * Created by Nikolay Yarlychenko on 13/11/2018
  */
-
-public class BinarySearch {
-
-
+public class BinarySearchMissing {
     public static void main(String[] args) {
         int x = Integer.parseInt(args[0]);
         List<Integer> array = new ArrayList<>();
@@ -17,9 +14,8 @@ public class BinarySearch {
             array.add(Integer.parseInt(args[i]));
         }
 
-
         int left = 0, right = array.size() - 1;
-
+        boolean check = false;
         while (left <= right) {
             int mid = (left + right) >>> 1;
             if (array.get(mid) > x) {
@@ -29,13 +25,20 @@ public class BinarySearch {
             }
         }
 
-        System.out.println(left);
-
+        if (left > array.size() - 1 || array.get(left) != x) {
+            System.out.println(-(left + 1));
+        } else {
+            System.out.println(left);
+        }
     }
 
-    public static int RecursiveBinarySearch(List<Integer> array, int left, int right, int x) {
+    private static int RecursiveBinarySearch(List<Integer> array, int left, int right, int x) {
         if (left > right) {
-            return left;
+            if (left > array.size() - 1 || array.get(left) != x) {
+                return -(left + 1);
+            } else {
+                return left;
+            }
         }
         int mid = (left + right) >>> 1;
         if (array.get(mid) > x) {
