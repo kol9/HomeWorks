@@ -17,9 +17,12 @@ public class BinarySearch {
             array.add(Integer.parseInt(args[i]));
         }
 
-
         int left = 0, right = array.size() - 1;
+        System.out.println(IterationBinarySearch(array, left, right, x));
 
+    }
+
+    public static int IterationBinarySearch(List<Integer> array, int left, int right, int x) {
         while (left <= right) {
             int mid = (left + right) >>> 1;
             if (array.get(mid) > x) {
@@ -28,9 +31,7 @@ public class BinarySearch {
                 right = mid - 1;
             }
         }
-
-        System.out.println(left);
-
+        return left;
     }
 
     public static int RecursiveBinarySearch(List<Integer> array, int left, int right, int x) {

@@ -15,7 +15,10 @@ public class BinarySearchMissing {
         }
 
         int left = 0, right = array.size() - 1;
-        boolean check = false;
+        System.out.println(IterationBinarySearch(array, left, right, x));
+    }
+
+    public static int IterationBinarySearch(List<Integer> array, int left, int right, int x) {
         while (left <= right) {
             int mid = (left + right) >>> 1;
             if (array.get(mid) > x) {
@@ -24,11 +27,10 @@ public class BinarySearchMissing {
                 right = mid - 1;
             }
         }
-
         if (left > array.size() - 1 || array.get(left) != x) {
-            System.out.println(-(left + 1));
+            return -(left + 1);
         } else {
-            System.out.println(left);
+            return left;
         }
     }
 
