@@ -8,6 +8,8 @@ public class ArrayQueue {
     private int tail = 0;
     private Object[] elements = new Object[5];
 
+    //      pre: element != null
+    //      post: size' = size + 1, ∀i = 1..size: a[i]' = a[i], a[size'] = element
     public void enqueue(Object element) {
         assert element != null;
         ensureCapacity(size() + 1);
@@ -38,11 +40,15 @@ public class ArrayQueue {
         elements = newElements;
     }
 
+    //      pre: size > 0
+    //      post: size' = size, ∀i = 1..size: a[i]' = a[i]
     public Object element() {
         assert size() > 0;
         return elements[head];
     }
 
+    //      pre: size > 0
+    //      post: size' = size - 1, ∀i = 1..size: a[i]' = a[i]
     public Object dequeue() {
         assert size() > 0;
         Object element = elements[head];
@@ -50,7 +56,7 @@ public class ArrayQueue {
         return element;
     }
 
-
+    //      post: size = size', ∀i = 1..size: a[i] = a[i]'
     public int size() {
         if (head > tail) {
             return elements.length - head + tail;
@@ -59,10 +65,12 @@ public class ArrayQueue {
         }
     }
 
+    //      post: size' = size, ∀i = 1..size: a[i]' = a[i]
     public boolean isEmpty() {
         return head == tail;
     }
 
+    //      post: size' = 0
     public void clear() {
         head = 0;
         tail = 0;

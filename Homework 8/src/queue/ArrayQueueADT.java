@@ -8,6 +8,8 @@ public class ArrayQueueADT {
     private int tail = 0;
     private Object[] elements = new Object[5];
 
+    //      pre: element != null
+    //      post: size' = size + 1, ∀i = 1..size: a[i]' = a[i], a[size'] = element
     public static void enqueue(ArrayQueueADT queue, Object element) {
         assert element != null;
 
@@ -39,11 +41,15 @@ public class ArrayQueueADT {
         queue.elements = newElements;
     }
 
+    //      pre: size > 0
+    //      post: size' = size, ∀i = 1..size: a[i]' = a[i]
     public static Object element(ArrayQueueADT queue) {
         assert size(queue) > 0;
         return queue.elements[queue.head];
     }
 
+    //      pre: size > 0
+    //      post: size' = size - 1, ∀i = 1..size: a[i]' = a[i]
     public static Object dequeue(ArrayQueueADT queue) {
         assert size(queue) > 0;
         Object element = queue.elements[queue.head];
@@ -51,7 +57,7 @@ public class ArrayQueueADT {
         return element;
     }
 
-
+    //      post: size = size', ∀i = 1..size: a[i] = a[i]'
     public static int size(ArrayQueueADT queue) {
         if (queue.head > queue.tail) {
             return queue.elements.length - queue.head + queue.tail;
@@ -60,10 +66,12 @@ public class ArrayQueueADT {
         }
     }
 
+    //      post: size' = size, ∀i = 1..size: a[i]' = a[i]
     public static boolean isEmpty(ArrayQueueADT queue) {
         return queue.head == queue.tail;
     }
 
+    //      post: size' = 0
     public static void clear(ArrayQueueADT queue) {
         queue.head = 0;
         queue.tail = 0;

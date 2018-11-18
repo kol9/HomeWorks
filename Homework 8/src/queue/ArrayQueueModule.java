@@ -10,6 +10,9 @@ public class ArrayQueueModule {
     private static int tail = 0;
     private static Object[] elements = new Object[5];
 
+
+    //      pre: element != null
+    //      post: size' = size + 1, ∀i = 1..size: a[i]' = a[i], a[size'] = element
     public static void enqueue(Object element) {
         assert element != null;
         ensureCapacity(size() + 1);
@@ -40,11 +43,15 @@ public class ArrayQueueModule {
         elements = newElements;
     }
 
+    //      pre: size > 0
+    //      post: size' = size, ∀i = 1..size: a[i]' = a[i]
     public static Object element() {
         assert size() > 0;
         return elements[head];
     }
 
+    //      pre: size > 0
+    //      post: size' = size - 1, ∀i = 1..size: a[i]' = a[i]
     public static Object dequeue() {
         assert size() > 0;
         Object element = elements[head];
@@ -52,7 +59,7 @@ public class ArrayQueueModule {
         return element;
     }
 
-
+    //      post: size = size', ∀i = 1..size: a[i] = a[i]'
     public static int size() {
         if (head > tail) {
             return elements.length - head + tail;
@@ -61,10 +68,13 @@ public class ArrayQueueModule {
         }
     }
 
+
+    //      post: size' = size, ∀i = 1..size: a[i]' = a[i]
     public static boolean isEmpty() {
         return head == tail;
     }
 
+    //      post: size' = 0
     public static void clear() {
         head = 0;
         tail = 0;
