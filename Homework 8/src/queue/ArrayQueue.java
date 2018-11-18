@@ -22,10 +22,10 @@ public class ArrayQueue {
         Object[] newElements = new Object[2 * capacity];
         int currentId = 0;
         if (tail < head) {
-            for (int i = head; i < capacity; i++) {
+            for (int i = head; i < elements.length; i++) {
                 newElements[currentId++] = elements[i];
             }
-            for (int i = tail; i < head; i++) {
+            for (int i = 0; i < tail; i++) {
                 newElements[currentId++] = elements[i];
             }
         } else {

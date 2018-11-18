@@ -11,7 +11,7 @@ public class ArrayQueueADT {
     public static void enqueue(ArrayQueueADT queue, Object element) {
         assert element != null;
 
-        queue.ensureCapacity(queue, queue.size(queue) + 1);
+        ensureCapacity(queue, size(queue) + 1);
         queue.elements[queue.tail] = element;
         queue.tail = (queue.tail + 1) % queue.elements.length;
     }
@@ -23,10 +23,10 @@ public class ArrayQueueADT {
         Object[] newElements = new Object[2 * capacity];
         int currentId = 0;
         if (queue.tail < queue.head) {
-            for (int i = queue.head; i < capacity; i++) {
+            for (int i = queue.head; i < queue.elements.length; i++) {
                 newElements[currentId++] = queue.elements[i];
             }
-            for (int i = queue.tail; i < queue.head; i++) {
+            for (int i = 0; i < queue.tail; i++) {
                 newElements[currentId++] = queue.elements[i];
             }
         } else {
