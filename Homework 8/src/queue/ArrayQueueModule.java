@@ -1,3 +1,5 @@
+package queue;
+
 /**
  * Created by Nikolay Yarlychenko on 18/11/2018
  */
@@ -6,14 +8,11 @@ public class ArrayQueueModule {
 
     private static int head = 0;
     private static int tail = 0;
-
     private static Object[] elements = new Object[5];
-
 
     public static void enqueue(Object element) {
         assert element != null;
         ensureCapacity(size() + 1);
-
         elements[tail] = element;
         tail = (tail + 1) % elements.length;
     }
@@ -22,7 +21,6 @@ public class ArrayQueueModule {
         if (capacity < elements.length) {
             return;
         }
-        System.out.println("ENSURE");
         Object[] newElements = new Object[2 * capacity];
         int currentId = 0;
         if (tail < head) {
