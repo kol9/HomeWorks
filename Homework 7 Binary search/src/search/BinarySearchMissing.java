@@ -16,7 +16,7 @@ public class BinarySearchMissing {
         }
 
         int left = 0, right = array.size() - 1;
-        System.out.println(IterativeBinarySearch(array, left, right, x));
+        System.out.println(RecursiveBinarySearch(array, left, right, x));
     }
 
     private static int IterativeBinarySearch(List<Integer> array, int left, int right, int x) {

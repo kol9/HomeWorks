@@ -19,24 +19,26 @@ public class ArrayQueueModule {
     }
 
     private static void ensureCapacity(int capacity) {
-        if (capacity <= elements.length) {
+        if (capacity < elements.length) {
             return;
         }
-
+        System.out.println("ENSURE");
         Object[] newElements = new Object[2 * capacity];
-        int j = 0;
-        if (tail > head) {
+        int currentId = 0;
+        if (tail < head) {
             for (int i = head; i < capacity; i++) {
-                newElements[j++] = elements[i];
+                newElements[currentId++] = elements[i];
             }
             for (int i = tail; i < head; i++) {
-                newElements[j++] = elements[i];
+                newElements[currentId++] = elements[i];
             }
         } else {
             for (int i = head; i < tail; i++) {
-                newElements[j++] = elements[i];
+                newElements[currentId++] = elements[i];
             }
         }
+        head = 0;
+        tail = currentId;
         elements = newElements;
     }
 
@@ -48,14 +50,14 @@ public class ArrayQueueModule {
     public static Object dequeue() {
         assert size() > 0;
         Object element = elements[head];
-        head = (head + 1) % size();
+        head = (head + 1) % elements.length;
         return element;
     }
 
 
     public static int size() {
         if (head > tail) {
-            return -head + tail;
+            return elements.length - head + tail;
         } else {
             return tail - head;
         }
