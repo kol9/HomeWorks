@@ -71,6 +71,8 @@ public class ArrayQueueModule {
         tail = 0;
     }
 
+    //      pre: element != null
+    //      post: size' = size + 1, ∀i = 2..size: a[i]' = a[i], a[1] = element
     public static void push(Object element) {
         assert element != null;
         ensureCapacity(size() + 1);
@@ -78,11 +80,15 @@ public class ArrayQueueModule {
         elements[head] = element;
     }
 
+    //      pre: size > 0
+    //      post: size' = size, ∀i = 1..size: a[i]' = a[i]
     public static Object peek() {
         assert size() > 0;
         return elements[(tail - 1 + elements.length) % elements.length];
     }
 
+    //      pre: size > 0
+    //      post: size' = size - 1, ∀i = 1..size - 1: a[i]' = a[i]
     public static Object remove() {
         assert size() > 0;
         tail = (tail - 1 + elements.length) % elements.length;

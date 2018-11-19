@@ -69,6 +69,8 @@ public class ArrayQueueADT {
         queue.tail = 0;
     }
 
+    //      pre: element != null
+    //      post: size' = size + 1, ∀i = 2..size: a[i]' = a[i], a[1] = element
     public static void push(ArrayQueueADT queue, Object element) {
         assert element != null;
         ensureCapacity(queue, size(queue) + 1);
@@ -76,11 +78,15 @@ public class ArrayQueueADT {
         queue.elements[queue.head] = element;
     }
 
+    //      pre: size > 0
+    //      post: size' = size, ∀i = 1..size: a[i]' = a[i]
     public static Object peek(ArrayQueueADT queue) {
         assert size(queue) > 0;
         return queue.elements[(queue.tail - 1 + queue.elements.length) % queue.elements.length];
     }
 
+    //      pre: size > 0
+    //      post: size' = size - 1, ∀i = 1..size - 1: a[i]' = a[i]
     public static Object remove(ArrayQueueADT queue) {
         assert size(queue) > 0;
         queue.tail = (queue.tail - 1 + queue.elements.length) % queue.elements.length;
