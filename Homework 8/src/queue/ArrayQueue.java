@@ -22,22 +22,13 @@ public class ArrayQueue {
             return;
         }
         Object[] newElements = new Object[2 * capacity];
-        int currentId = 0;
-        if (tail < head) {
-            for (int i = head; i < elements.length; i++) {
-                newElements[currentId++] = elements[i];
-            }
-            for (int i = 0; i < tail; i++) {
-                newElements[currentId++] = elements[i];
-            }
-        } else {
-            for (int i = head; i < tail; i++) {
-                newElements[currentId++] = elements[i];
-            }
+        for (int i = 0; i < capacity - 1; i++) {
+            newElements[i] = elements[head];
+            head = (head + 1) % capacity;
         }
-        head = 0;
-        tail = currentId;
         elements = newElements;
+        head = 0;
+        tail = capacity - 1;
     }
 
     //      pre: size > 0
@@ -74,6 +65,24 @@ public class ArrayQueue {
     public void clear() {
         head = 0;
         tail = 0;
+    }
+
+    public void push(Object element) {
+        assert element != null;
+        ensureCapacity(size() + 1);
+        head = (head - 1 + elements.length) % elements.length;
+        elements[head] = element;
+    }
+
+    public Object peek() {
+        assert size() > 0;
+        return elements[(tail - 1 + elements.length) % elements.length];
+    }
+
+    public Object remove() {
+        assert size() > 0;
+        tail = (tail - 1 + elements.length) % elements.length;
+        return elements[tail];
     }
 
 }

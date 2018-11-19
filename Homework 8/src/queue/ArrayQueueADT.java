@@ -12,33 +12,25 @@ public class ArrayQueueADT {
     //      post: size' = size + 1, ∀i = 1..size: a[i]' = a[i], a[size'] = element
     public static void enqueue(ArrayQueueADT queue, Object element) {
         assert element != null;
-
         ensureCapacity(queue, size(queue) + 1);
         queue.elements[queue.tail] = element;
         queue.tail = (queue.tail + 1) % queue.elements.length;
     }
 
+
     private static void ensureCapacity(ArrayQueueADT queue, int capacity) {
         if (capacity < queue.elements.length) {
             return;
         }
+
         Object[] newElements = new Object[2 * capacity];
-        int currentId = 0;
-        if (queue.tail < queue.head) {
-            for (int i = queue.head; i < queue.elements.length; i++) {
-                newElements[currentId++] = queue.elements[i];
-            }
-            for (int i = 0; i < queue.tail; i++) {
-                newElements[currentId++] = queue.elements[i];
-            }
-        } else {
-            for (int i = queue.head; i < queue.tail; i++) {
-                newElements[currentId++] = queue.elements[i];
-            }
+        for (int i = 0; i < capacity - 1; i++) {
+            newElements[i] = queue.elements[queue.head];
+            queue.head = (queue.head + 1) % capacity;
         }
-        queue.head = 0;
-        queue.tail = currentId;
         queue.elements = newElements;
+        queue.head = 0;
+        queue.tail = capacity - 1;
     }
 
     //      pre: size > 0
@@ -76,4 +68,23 @@ public class ArrayQueueADT {
         queue.head = 0;
         queue.tail = 0;
     }
+
+    public static void push(ArrayQueueADT queue, Object element) {
+        assert element != null;
+        ensureCapacity(queue, size(queue) + 1);
+        queue.head = (queue.head - 1 + queue.elements.length) % queue.elements.length;
+        queue.elements[queue.head] = element;
+    }
+
+    public static Object peek(ArrayQueueADT queue) {
+        assert size(queue) > 0;
+        return queue.elements[(queue.tail - 1 + queue.elements.length) % queue.elements.length];
+    }
+
+    public static Object remove(ArrayQueueADT queue) {
+        assert size(queue) > 0;
+        queue.tail = (queue.tail - 1 + queue.elements.length) % queue.elements.length;
+        return queue.elements[queue.tail];
+    }
+
 }
