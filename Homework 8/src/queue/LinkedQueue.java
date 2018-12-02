@@ -1,35 +1,42 @@
+package queue;
+
 /**
  * Created by Nikolay Yarlychenko on 27/11/2018
  */
 public class LinkedQueue {
-    private int size;
     private Node head;
     private Node tail;
 
-    public void enqueue(Object element) {
-        assert element != null;
-        tail = new Node(element, tail);
+    public void enqueueImpl(Object element) {
+        Node newNode = tail;
+        tail = new Node(element, null);
+        if (size == 0) {
+            head = tail;
+        } else {
+            newNode.next = tail;
+        }
         size++;
     }
-    public Object element(){
-        assert size > 0;
-        size--;
+
+    public Object elementImpl() {
         return head.value;
     }
-    public Object dequeue(){
-        assert size > 0;
+
+    public Object dequeueImpl() {
         size--;
-        Object result = head.value;
+        Object element = head.value;
         head = head.next;
-        return result;
+        return element;
     }
 
-    public int size() {
+    public int sizeImpl() {
         return size;
     }
+
     public boolean isEmpty() {
         return size == 0;
     }
+
     public void clear() {
         head = tail;
     }
