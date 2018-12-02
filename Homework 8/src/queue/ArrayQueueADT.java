@@ -51,11 +51,7 @@ public class ArrayQueueADT {
 
     //      post: size = size', ∀i = 1..size: a[i] = a[i]'
     public static int size(ArrayQueueADT queue) {
-        if (queue.head > queue.tail) {
-            return queue.elements.length - queue.head + queue.tail;
-        } else {
-            return queue.tail - queue.head;
-        }
+        return (queue.tail - queue.head + queue.elements.length) % queue.elements.length;
     }
 
     //      post: size' = size, ∀i = 1..size: a[i]' = a[i]

@@ -5,4 +5,8 @@ package queue;
  */
 public abstract class AbstractQueue implements Queue{
 
+    public void enqueue(Object element) {
+        assert element != null;
+    }
+
 }

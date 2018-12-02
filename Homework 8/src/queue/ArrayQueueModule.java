@@ -52,11 +52,7 @@ public class ArrayQueueModule {
 
     //      post: size = size', ∀i = 1..size: a[i] = a[i]'
     public static int size() {
-        if (head > tail) {
-            return elements.length - head + tail;
-        } else {
-            return tail - head;
-        }
+        return (tail - head + elements.length) % elements.length;
     }
 
 

@@ -9,7 +9,6 @@ public class LinkedQueue extends AbstractQueue{
     private Node tail;
 
     public void enqueue(Object element) {
-        assert element != null;
         Node newNode = tail;
         tail = new Node(element, null);
         if (size == 0) {
@@ -21,16 +20,15 @@ public class LinkedQueue extends AbstractQueue{
     }
 
     public Object element() {
-        assert size > 0;
         return head.value;
     }
 
     public Object dequeue() {
         assert size > 0;
         size--;
-        Object result = head.value;
+        Object element = head.value;
         head = head.next;
-        return result;
+        return element;
     }
 
     public int size() {
@@ -44,6 +42,17 @@ public class LinkedQueue extends AbstractQueue{
     public void clear() {
         head = tail;
         size = 0;
+    }
+
+    public Object[] toArray() {
+        Object[] newElements = new Object[size()];
+
+        Node newHead = head;
+        for(int i = 0; i < size; i++) {
+            newElements[i] = newHead.value;
+            newHead = newHead.next;
+        }
+        return newElements;
     }
 
 
