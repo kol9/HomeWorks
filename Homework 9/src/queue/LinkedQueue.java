@@ -9,7 +9,6 @@ public class LinkedQueue extends AbstractQueue{
     private Node tail;
 
     public void enqueue(Object element) {
-
         assert element != null;
         Node newNode = tail;
         tail = new Node(element, null);
@@ -44,6 +43,7 @@ public class LinkedQueue extends AbstractQueue{
 
     public void clear() {
         head = tail;
+        size = 0;
     }
 
 
