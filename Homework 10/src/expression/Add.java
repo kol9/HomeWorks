@@ -12,7 +12,6 @@ public class Add extends BinaryOperation {
         return first + second;
     }
 
-
     public double operation(double first, double second) {
         return first + second;
     }
