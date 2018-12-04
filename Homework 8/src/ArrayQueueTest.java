@@ -4,13 +4,13 @@ import queue.ArrayQueue;
  * Created by Nikolay Yarlychenko on 18/11/2018
  */
 public class ArrayQueueTest {
-    public static void fill(ArrayQueue queue) {
+    private static void fill(ArrayQueue queue) {
         for (int i = 0; i < 10; i++) {
             queue.enqueue(i);
         }
     }
 
-    public static void dump(ArrayQueue queue) {
+    private static void dump(ArrayQueue queue) {
         while (!queue.isEmpty()) {
             System.out.println(
                     queue.size() + " " +

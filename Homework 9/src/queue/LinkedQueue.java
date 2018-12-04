@@ -3,7 +3,7 @@ package queue;
 /**
  * Created by Nikolay Yarlychenko on 27/11/2018
  */
-public class LinkedQueue extends AbstractQueue{
+public class LinkedQueue extends AbstractQueue {
     private int size;
     private Node head;
     private Node tail;
@@ -48,7 +48,7 @@ public class LinkedQueue extends AbstractQueue{
         Object[] newElements = new Object[size()];
 
         Node newHead = head;
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             newElements[i] = newHead.value;
             newHead = newHead.next;
         }

@@ -5,7 +5,7 @@ package expression;
  */
 public class Main {
     public static void main(String[] args) {
-        if(args.length == 0) {
+        if (args.length == 0) {
             System.out.println("Arguments are clear");
             System.exit(0);
         }
@@ -24,7 +24,7 @@ public class Main {
             ).evaluate(x);
             System.out.println(answer);
         } catch (NumberFormatException e) {
-            e.printStackTrace();
+            System.out.println("Argument is not number");
         }
     }
 }

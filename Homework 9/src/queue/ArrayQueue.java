@@ -58,7 +58,7 @@ public class ArrayQueue extends AbstractQueue {
         Object[] newElements = new Object[size()];
 
         int newHead = head;
-        for(int i = 0; i < size(); i++) {
+        for (int i = 0; i < size(); i++) {
             newElements[i] = elements[newHead];
             newHead = (newHead + 1) % elements.length;
         }

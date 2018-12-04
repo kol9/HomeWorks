@@ -12,6 +12,7 @@ public abstract class BinaryOperation implements AnyExpression {
     }
 
     abstract int operation(int first, int second);
+
     abstract double operation(double first, double second);
 
     public int evaluate(int x) {
@@ -23,6 +24,6 @@ public abstract class BinaryOperation implements AnyExpression {
     }
 
     public int evaluate(int x, int y, int z) {
-        return operation(first.evaluate(x,y,z), second.evaluate(x,y,z));
+        return operation(first.evaluate(x, y, z), second.evaluate(x, y, z));
     }
 }
