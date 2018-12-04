@@ -6,9 +6,10 @@ package queue;
 public class ArrayQueue extends AbstractQueue {
     private int head = 0;
     private int tail = 0;
+    private int size = 0;
     private Object[] elements = new Object[5];
 
-    public void enqueue(Object element) {
+    public void enqueueImpl(Object element) {
         ensureCapacity(size() + 1);
         elements[tail] = element;
         tail = (tail + 1) % elements.length;
@@ -28,41 +29,28 @@ public class ArrayQueue extends AbstractQueue {
         tail = capacity - 1;
     }
 
-    public Object element() {
+    public Object elementImpl() {
         return elements[head];
     }
 
-    public Object dequeue() {
-        assert size() > 0;
+    public Object dequeueImpl() {
         Object element = elements[head];
         head = (head + 1) % elements.length;
         return element;
     }
 
-    public int size() {
-        return (elements.length - head + tail) % elements.length;
-    }
-
-    public boolean isEmpty() {
-        return head == tail;
-    }
-
-
-    public void clear() {
+    public void clearImpl() {
         head = 0;
         tail = 0;
     }
 
 
-    public Object[] toArray() {
-        Object[] newElements = new Object[size()];
-
+    public Object[] toArrayImpl(Object[] newElements) {
         int newHead = head;
-        for (int i = 0; i < size(); i++) {
+        for (int i = 0; i < size; i++) {
             newElements[i] = elements[newHead];
             newHead = (newHead + 1) % elements.length;
         }
-
         return newElements;
     }
 }

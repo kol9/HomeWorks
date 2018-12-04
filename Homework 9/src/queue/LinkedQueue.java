@@ -8,7 +8,7 @@ public class LinkedQueue extends AbstractQueue {
     private Node head;
     private Node tail;
 
-    public void enqueue(Object element) {
+    public void enqueueImpl(Object element) {
         Node newNode = tail;
         tail = new Node(element, null);
         if (size == 0) {
@@ -16,37 +16,23 @@ public class LinkedQueue extends AbstractQueue {
         } else {
             newNode.next = tail;
         }
-        size++;
     }
 
-    public Object element() {
+    public Object elementImpl() {
         return head.value;
     }
 
-    public Object dequeue() {
-        assert size > 0;
-        size--;
+    public Object dequeueImpl() {
         Object element = head.value;
         head = head.next;
         return element;
     }
 
-    public int size() {
-        return size;
-    }
-
-    public boolean isEmpty() {
-        return size == 0;
-    }
-
-    public void clear() {
+    public void clearImpl() {
         head = tail;
-        size = 0;
     }
 
-    public Object[] toArray() {
-        Object[] newElements = new Object[size()];
-
+    public Object[] toArrayImpl(Object[] newElements) {
         Node newHead = head;
         for (int i = 0; i < size; i++) {
             newElements[i] = newHead.value;
