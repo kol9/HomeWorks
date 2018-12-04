@@ -4,7 +4,7 @@ package queue;
  * Created by Nikolay Yarlychenko on 02/12/2018
  */
 public abstract class AbstractQueue implements Queue {
-    private int size;
+    int size;
 
     public void enqueue(Object element) {
         assert element != null;
@@ -42,7 +42,7 @@ public abstract class AbstractQueue implements Queue {
     protected abstract void clearImpl();
 
     public boolean isEmpty() {
-        return size == 0;
+        return (size == 0);
     }
 
     public Object[] toArray() {
@@ -50,6 +50,6 @@ public abstract class AbstractQueue implements Queue {
         return toArrayImpl(newElements);
     }
 
-    abstract Object[] toArrayImpl(Object[] newElements);
+    abstract Object[] toArrayImpl(Object[] a);
 
 }

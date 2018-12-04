@@ -4,7 +4,6 @@ package queue;
  * Created by Nikolay Yarlychenko on 27/11/2018
  */
 public class LinkedQueue extends AbstractQueue {
-    private int size;
     private Node head;
     private Node tail;
 

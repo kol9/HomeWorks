@@ -15,6 +15,9 @@ public class LinkedQueueTest{
         while (!queue.isEmpty()) {
             System.out.println(queue.size() + " " +
                     queue.element() + " " + queue.dequeue());
+//            System.out.println(queue.size());
+//            System.out.println(queue.element());
+//            System.out.println(queue.dequeue());
         }
     }
 
