@@ -130,11 +130,19 @@ public class ExpressionParser implements Parser {
                     if (index == expression.length() - 1) {
                         throw new UnknownSymbolException("Wrong input expression");
                     }
-                    char nextChar = expression.charAt(index + 1);
-                    if (nextChar == ' ' || operations.contains(curToken)) {
-                        throw new UnknownSymbolException("Unknown symbol: " + ErrorMessage(expression, index, true));
+                    char nextChar = expression.charAt(index++);
+
+                    if (nextChar == ' ') {
+                        throw new UnknownSymbolException("Unknown symbol: " + ErrorMessage(expression, index - 1, true));
+                    } else {
+                        StringBuilder sb = new StringBuilder();
+                        while(index < expression.length() && nextChar != ' ') {
+                            sb.append(nextChar);
+                            nextChar = expression.charAt(index++);
+                        }
+                        throw new UnknownSymbolException("Unreserved sequence: " + sb.toString());
                     }
-                    throw new UnknownSymbolException("Wrong input expression");
+                    //throw new UnknownSymbolException("Wrong input expression");
                 }
         }
 
