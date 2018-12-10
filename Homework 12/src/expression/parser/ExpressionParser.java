@@ -128,19 +128,23 @@ public class ExpressionParser implements Parser {
                     index += 3;
                 } else {
                     if (index == expression.length() - 1) {
-                        throw new UnknownSymbolException("Wrong input expression");
+                        throw new UnknownSymbolException("Unknown symbol \'" + expression.charAt(index) + "\' : " + ErrorMessage(expression, index - 1, true));
                     }
-                    char nextChar = expression.charAt(index++);
+                    char nextChar = expression.charAt(++index);
 
-                    if (nextChar == ' ') {
-                        throw new UnknownSymbolException("Unknown symbol: " + ErrorMessage(expression, index - 1, true));
+                    if (nextChar == ' ' || index == expression.length() - 1) {
+                        throw new UnknownSymbolException("Unknown symbol \'" + expression.charAt(index - 1) + "\' : " + ErrorMessage(expression, index - 1, true));
                     } else {
                         StringBuilder sb = new StringBuilder();
-                        while(index < expression.length() && nextChar != ' ') {
+                        sb.append(expression.charAt(index - 1));
+                        while (index < expression.length() - 1 && nextChar != ' ') {
                             sb.append(nextChar);
-                            nextChar = expression.charAt(index++);
+                            nextChar = expression.charAt(++index);
                         }
-                        throw new UnknownSymbolException("Unreserved sequence: " + sb.toString());
+                        if(expression.charAt(index) != ' ' ) {
+                            sb.append(expression.charAt(index));
+                        }
+                        throw new UnreservedSequenceException("Unreserved sequence: \"" + sb.toString() + "\"");
                     }
                     //throw new UnknownSymbolException("Wrong input expression");
                 }

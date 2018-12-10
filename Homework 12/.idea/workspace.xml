@@ -2,54 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1649aa40-087a-4d47-bfb7-a16530b99c25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Homework 12.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/Asserts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/Either.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/MainChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/MainFilesChecker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/Randomized.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/TestCounter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/base/Triple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/Abs.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/BinaryOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/CheckedAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/CheckedDivide.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/CheckedMultiply.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/CheckedNegate.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/CheckedSubtract.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/Const.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/Max.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/Min.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/Sqrt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/TripleExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/UnaryOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/Variable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/BracketsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/EvaluateException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/ExceptionsAbsSqrtTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/ExceptionsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/ExpectedSpaceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/IllegalOperationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/MissingArgumentException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/MissingOperatorException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/OverflowException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/ParsingException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/UnknownSymbolException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/parser/MyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/parser/Parser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/parser/ParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 11/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 11/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework 11/src/test/Util.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Homework-11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Homework-11/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/UnreservedSequenceException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/parser/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/parser/MyTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,35 +24,36 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="140" />
+          <entry key="java" value="145" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="140" />
+          <entry key="JAVA" value="145" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="65" />
-          <entry key="java" value="3577" />
+          <entry key="java" value="4021" />
+          <entry key="txt" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="3577" />
-          <entry key="PLAIN_TEXT" value="65" />
+          <entry key="JAVA" value="4021" />
+          <entry key="PLAIN_TEXT" value="74" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ParsingException.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+            <state relative-caret-position="306">
+              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
               <folding>
                 <element signature="e#183#184#0" expanded="true" />
                 <element signature="e#215#216#0" expanded="true" />
@@ -106,10 +63,46 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-54">
+              <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+              <folding>
+                <element signature="e#1446#1447#0" expanded="true" />
+                <element signature="e#1494#1495#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-987">
+              <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2089#2090#0" expanded="true" />
+                <element signature="e#2131#2132#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/expression/parser/ParserTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="134" column="40" lean-forward="true" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
+            <state relative-caret-position="513">
+              <caret line="150" column="9" lean-forward="true" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,10 +111,23 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/expression/exceptions/UnreservedSequenceException.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+              <folding>
+                <element signature="e#214#215#0" expanded="true" />
+                <element signature="e#247#248#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/expression/parser/MyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+            <state relative-caret-position="374">
+              <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -155,6 +161,11 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Nikolay Yarlychenko &lt;yarlychenkonikolay@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
@@ -197,9 +208,10 @@
         <option value="$PROJECT_DIR$/src/expression/Max.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTes.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTest.java" />
-        <option value="$PROJECT_DIR$/src/expression/parser/MyTest.java" />
-        <option value="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/ParsingException.java" />
+        <option value="$PROJECT_DIR$/src/expression/exceptions/UnreservedSequenceException.java" />
+        <option value="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" />
+        <option value="$PROJECT_DIR$/src/expression/parser/MyTest.java" />
       </list>
     </option>
   </component>
@@ -268,7 +280,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544480025444" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544482177245" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
@@ -292,7 +304,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.ExceptionsMinMaxTest">
+  <component name="RunManager" selected="Application.MyTest">
     <configuration name="ExceptionsAbsSqrtTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="expression.exceptions.ExceptionsAbsSqrtTest" />
       <module name="Homework 12" />
@@ -367,9 +379,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ExceptionsMinMaxTest" />
         <item itemvalue="Application.MyTest" />
         <item itemvalue="Application.ExceptionsTest" />
+        <item itemvalue="Application.ExceptionsMinMaxTest" />
         <item itemvalue="Application.ExceptionsAbsSqrtTest" />
         <item itemvalue="Application.ParserBitwiseTest" />
       </list>
@@ -385,12 +397,27 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1544452643301</updated>
-      <workItem from="1544452644785" duration="20850000" />
+      <workItem from="1544452644785" duration="22998000" />
     </task>
+    <task id="LOCAL-00001" summary="Hw 12">
+      <created>1544480077428</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544480077428</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Hw 12">
+      <created>1544480959800</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1544480959800</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20850000" />
+    <option name="totallyTimeSpent" value="22998000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -431,6 +458,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Hw 12" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hw 12" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/expression/parser/ParserShiftsTest.java">
@@ -580,13 +611,6 @@
             <element signature="e#1154#1155#0" expanded="true" />
             <element signature="e#1178#1179#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/parser/ParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -759,29 +783,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="10" column="37" lean-forward="true" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-          <folding>
-            <element signature="e#1446#1447#0" expanded="true" />
-            <element signature="e#1494#1495#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1802">
-          <caret line="131" selection-start-line="131" selection-end-line="131" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
-            <element signature="e#2131#2132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/Abs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -830,33 +831,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/parser/MyTest.java">
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ParsingException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+        <state relative-caret-position="306">
+          <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/parser/ParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-54">
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#1446#1447#0" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-987">
+          <caret line="46" column="43" lean-forward="true" selection-start-line="46" selection-start-column="16" selection-end-line="46" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#2089#2090#0" expanded="true" />
+            <element signature="e#2131#2132#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="134" column="40" lean-forward="true" selection-start-line="134" selection-start-column="40" selection-end-line="134" selection-end-column="40" />
+        <state relative-caret-position="513">
+          <caret line="150" column="9" lean-forward="true" selection-start-line="150" selection-start-column="9" selection-end-line="150" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ParsingException.java">
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/UnreservedSequenceException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
+        <state relative-caret-position="170">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
           <folding>
-            <element signature="e#183#184#0" expanded="true" />
-            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#214#215#0" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/parser/MyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
