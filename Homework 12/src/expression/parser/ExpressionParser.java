@@ -146,7 +146,6 @@ public class ExpressionParser implements Parser {
                         }
                         throw new UnreservedSequenceException("Unreserved sequence: \"" + sb.toString() + "\"");
                     }
-                    //throw new UnknownSymbolException("Wrong input expression");
                 }
         }
 

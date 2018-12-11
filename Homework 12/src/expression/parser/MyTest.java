@@ -14,14 +14,14 @@ public class MyTest {
         ExpressionParser parser = new ExpressionParser();
         int x = 5;
         try {
-            String s = "1000000*x*x*x*x*x/(x-1)";
+            String s = " -7 8";
             try {
                 System.out.println(parser.parse(s).evaluate(5, 1, 1));
             } catch (EvaluateException | ParsingException e) {
                 e.printStackTrace();
             }
         } catch (NumberFormatException e) {
-            System.out.println("Non-integer value");
+            System.out.println("Not integer number");
         }
 
     }
