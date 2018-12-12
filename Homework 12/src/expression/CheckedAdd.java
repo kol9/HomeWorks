@@ -12,16 +12,16 @@ public class CheckedAdd extends BinaryOperation {
     }
 
     void check(int x, int y) throws OverflowException {
-        if(x > 0 && Integer.MAX_VALUE - x < y) {
+        if (x > 0 && Integer.MAX_VALUE - x < y) {
             throw new OverflowException();
         }
-        if(x < 0 && Integer.MIN_VALUE - x > y) {
+        if (x < 0 && Integer.MIN_VALUE - x > y) {
             throw new OverflowException();
         }
     }
 
     public int operation(int first, int second) throws EvaluateException {
-        check(first,second);
+        check(first, second);
         return first + second;
     }
 }

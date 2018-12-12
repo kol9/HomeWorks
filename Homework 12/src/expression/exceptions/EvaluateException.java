@@ -5,8 +5,8 @@ package expression.exceptions;
  */
 public class EvaluateException extends Exception {
 
-    EvaluateException(String s) {
-        super(s);
+    public EvaluateException(String exception) {
+        super(exception);
     }
 
 }

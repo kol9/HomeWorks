@@ -5,7 +5,7 @@ package expression.exceptions;
  */
 public class IllegalOperationException extends EvaluateException {
 
-    public IllegalOperationException(String s) {
-        super(s);
+    public IllegalOperationException(String exception) {
+        super(exception);
     }
 }

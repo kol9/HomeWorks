@@ -1,6 +1,7 @@
 package expression.parser;
 
 import expression.*;
+import expression.Log;
 import expression.exceptions.*;
 
 import java.util.EnumSet;
@@ -19,9 +20,10 @@ public class ExpressionParser implements Parser {
 
 
     private enum Token {
-        ABS, ADD, BEGIN, MIN, MAX,
-        DIV, END, LP, MUL, NEGATE,
-        NUMBER, RP, SQRT, SUB, VARIABLE
+        ABS, ADD, BEGIN, DIV, END, LOG, LP,
+        MAX, MIN, MUL, NEGATE, NUMBER,
+        POW, RP, SQRT, SUB, VARIABLE
+
     }
 
     private Set<Token> operations = EnumSet.of(Token.ADD, Token.MUL, Token.DIV, Token.SUB);
@@ -120,6 +122,12 @@ public class ExpressionParser implements Parser {
                 } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("min")) {
                     curToken = Token.MIN;
                     index += 2;
+                } else if (index + 3 < expression.length() && expression.substring(index, index + 4).equals("log2")) {
+                    curToken = Token.LOG;
+                    index += 3;
+                } else if (index + 2 < expression.length() && expression.substring(index, index + 4).equals("pow2")) {
+                    curToken = Token.POW;
+                    index += 3;
                 } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("max")) {
                     curToken = Token.MAX;
                     index += 2;
@@ -141,7 +149,7 @@ public class ExpressionParser implements Parser {
                             sb.append(nextChar);
                             nextChar = expression.charAt(++index);
                         }
-                        if(expression.charAt(index) != ' ' ) {
+                        if (expression.charAt(index) != ' ') {
                             sb.append(expression.charAt(index));
                         }
                         throw new UnreservedSequenceException("Unreserved sequence: \"" + sb.toString() + "\"");
@@ -172,6 +180,12 @@ public class ExpressionParser implements Parser {
                 break;
             case SQRT:
                 res = new Sqrt(unary());
+                break;
+            case LOG:
+                res = new Log(unary());
+                break;
+            case POW:
+                res = new Pow(unary());
                 break;
             case LP:
                 res = minMax();

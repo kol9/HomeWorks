@@ -4,7 +4,7 @@ package queue;
  * Created by Nikolay Yarlychenko on 02/12/2018
  */
 public abstract class AbstractQueue implements Queue {
-    int size;
+    protected int size;
 
     public void enqueue(Object element) {
         assert element != null;

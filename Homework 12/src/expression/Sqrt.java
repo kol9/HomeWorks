@@ -2,7 +2,6 @@ package expression;
 
 import expression.exceptions.EvaluateException;
 import expression.exceptions.IllegalOperationException;
-import expression.exceptions.OverflowException;
 
 /**
  * Created by Nikolay Yarlychenko on 10/12/2018
@@ -14,7 +13,7 @@ public class Sqrt extends UnaryOperation {
     }
 
     void check(int x) throws EvaluateException {
-        if(x < 0) {
+        if (x < 0) {
             throw new IllegalOperationException("Sqrt from negative number");
         }
     }
@@ -23,11 +22,11 @@ public class Sqrt extends UnaryOperation {
         check(x);
         int l = 0;
         int r = 46340;
-        while(r - l > 1) {
+        while (r - l > 1) {
             int m = (l + r) / 2;
-            if(m * m <= x) {
+            if (m * m <= x) {
                 l = m;
-            } else{
+            } else {
                 r = m;
             }
         }
