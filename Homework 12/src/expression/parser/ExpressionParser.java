@@ -22,8 +22,8 @@ public class ExpressionParser implements Parser {
     private enum Token {
         ABS, ADD, BEGIN, DIV, END, LOG, LP,
         MAX, MIN, MUL, NEGATE, NUMBER,
-        POW, RP, SQRT, SUB, VARIABLE
-
+        POW, RP, SQRT, SUB, VARIABLE,
+        HIGH, LOW
     }
 
     private Set<Token> operations = EnumSet.of(Token.ADD, Token.MUL, Token.DIV, Token.SUB);
@@ -116,6 +116,12 @@ public class ExpressionParser implements Parser {
                 } else if (ch == 'x' || ch == 'y' || ch == 'z') {
                     varName = String.valueOf(ch);
                     curToken = Token.VARIABLE;
+                } else if (index + 3 < expression.length() && expression.substring(index, index + 4).equals("high")) {
+                    curToken = Token.HIGH;
+                    index += 3;
+                } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("low")) {
+                    curToken = Token.LOW;
+                    index += 2;
                 } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("abs")) {
                     curToken = Token.ABS;
                     index += 2;
@@ -125,7 +131,7 @@ public class ExpressionParser implements Parser {
                 } else if (index + 3 < expression.length() && expression.substring(index, index + 4).equals("log2")) {
                     curToken = Token.LOG;
                     index += 3;
-                } else if (index + 2 < expression.length() && expression.substring(index, index + 4).equals("pow2")) {
+                } else if (index + 3 < expression.length() && expression.substring(index, index + 4).equals("pow2")) {
                     curToken = Token.POW;
                     index += 3;
                 } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("max")) {
@@ -186,6 +192,12 @@ public class ExpressionParser implements Parser {
                 break;
             case POW:
                 res = new Pow(unary());
+                break;
+            case HIGH:
+                res = new High(unary());
+                break;
+            case LOW:
+                res = new Low(unary());
                 break;
             case LP:
                 res = minMax();

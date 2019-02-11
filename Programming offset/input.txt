@@ -1,0 +1,7 @@
+add 1 first
+add 2 ssecond
+add 1 first1
+add 2 ssssecond
+print output.txt
+remove 2
+print output.txt
