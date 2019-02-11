@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1649aa40-087a-4d47-bfb7-a16530b99c25" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/expression/High.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/Low.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/expression/exceptions/ExceptionsHighLowTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Programming offset/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Programming offset/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Programming offset/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Programming offset/src/FastScanner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Programming offset/src/StableSort.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abc/src/BoardConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../abc/src/Player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework-11/src/expression/ExpressionParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Homework-11/src/expression/parser/Either.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/expression/parser/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/expression/parser/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/parser/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/High.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/High.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/Low.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/Low.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -53,24 +44,24 @@
         <counts>
           <entry key="dummy" value="65" />
           <entry key="java" value="4958" />
-          <entry key="txt" value="70" />
+          <entry key="txt" value="96" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="4958" />
-          <entry key="PLAIN_TEXT" value="135" />
+          <entry key="PLAIN_TEXT" value="161" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="124" column="26" lean-forward="true" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
+            <state relative-caret-position="329">
+              <caret line="132" column="31" lean-forward="true" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,8 +96,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/expression/High.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="255">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <element signature="e#206#207#0" expanded="true" />
                 <element signature="e#230#231#0" expanded="true" />
@@ -133,11 +124,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/expression/Low.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state relative-caret-position="255">
+              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
               <folding>
                 <element signature="e#204#205#0" expanded="true" />
                 <element signature="e#228#229#0" expanded="true" />
@@ -227,11 +218,11 @@
         <option value="$PROJECT_DIR$/src/expression/Sqrt.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/Log.java" />
         <option value="$PROJECT_DIR$/src/expression/parser/Log.java" />
-        <option value="$PROJECT_DIR$/src/expression/Low.java" />
-        <option value="$PROJECT_DIR$/src/expression/High.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/ExceptionsHighLowTest.java" />
         <option value="$PROJECT_DIR$/src/expression/parser/MyTest.java" />
         <option value="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" />
+        <option value="$PROJECT_DIR$/src/expression/High.java" />
+        <option value="$PROJECT_DIR$/src/expression/Low.java" />
       </list>
     </option>
   </component>
@@ -305,7 +296,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549904495199" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549904658777" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -428,7 +419,7 @@
       <workItem from="1545127900485" duration="148000" />
       <workItem from="1545748421803" duration="2561000" />
       <workItem from="1549899273803" duration="571000" />
-      <workItem from="1549900760125" duration="2254000" />
+      <workItem from="1549900760125" duration="2413000" />
     </task>
     <task id="LOCAL-00001" summary="Hw 12">
       <created>1544480077428</created>
@@ -465,11 +456,18 @@
       <option name="project" value="LOCAL" />
       <updated>1544617430844</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="New modification">
+      <created>1549904520043</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1549904520043</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35874000" />
+    <option name="totallyTimeSpent" value="36033000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -515,7 +513,8 @@
     <MESSAGE value="Hw 12" />
     <MESSAGE value="Added blue inscription" />
     <MESSAGE value="Bug fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fixed" />
+    <MESSAGE value="New modification" />
+    <option name="LAST_COMMIT_MESSAGE" value="New modification" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Throwable.java">
@@ -814,17 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/Low.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
-          <folding>
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsHighLowTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -851,17 +839,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/High.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/Sqrt.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -874,10 +851,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="124" column="26" lean-forward="true" selection-start-line="124" selection-start-column="26" selection-end-line="124" selection-end-column="26" />
+        <state relative-caret-position="329">
+          <caret line="132" column="31" lean-forward="true" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/High.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#206#207#0" expanded="true" />
+            <element signature="e#230#231#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/Low.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
           </folding>
         </state>
       </provider>

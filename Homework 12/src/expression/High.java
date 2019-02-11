@@ -14,8 +14,4 @@ public class High extends UnaryOperation {
     int operation(int x) throws EvaluateException {
         return Integer.highestOneBit(x);
     }
-
-    void check(int x) throws EvaluateException {
-
-    }
 }
