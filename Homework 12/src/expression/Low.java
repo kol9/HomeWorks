@@ -14,4 +14,8 @@ public class Low extends UnaryOperation {
     int operation(int x) throws EvaluateException {
         return Integer.lowestOneBit(x);
     }
+
+    void check(int x) throws EvaluateException {
+
+    }
 }
