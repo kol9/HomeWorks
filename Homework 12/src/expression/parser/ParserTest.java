@@ -1,6 +1,5 @@
 package expression.parser;
 
-import base.Either;
 import expression.BaseTest;
 import expression.TripleExpression;
 

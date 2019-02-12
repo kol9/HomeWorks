@@ -16,7 +16,8 @@ public class CheckedNegate extends UnaryOperation {
         }
     }
 
-    int operation(int x) {
+    int operation(int x) throws OverflowException {
+        check(x);
         return -x;
     }
 

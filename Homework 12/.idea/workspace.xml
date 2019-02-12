@@ -3,8 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="1649aa40-087a-4d47-bfb7-a16530b99c25" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/expression/High.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/High.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/expression/Low.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/Low.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Asserts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Asserts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Either.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/parser/Either.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/MainChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/MainChecker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/base/Triple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Triple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/CheckedNegate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/CheckedNegate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/exceptions/ExceptionsHighLowTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/exceptions/ExceptionsHighLowTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/exceptions/ExceptionsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/exceptions/ExceptionsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/parser/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/parser/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/parser/Parser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/exceptions/Parser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/expression/parser/ParserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/expression/parser/ParserTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,41 +24,47 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Homework_12$ExceptionsTest.ic" NAME="ExceptionsTest Coverage Results" MODIFIED="1549984105949" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>expression.exceptions.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1877105087">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.1" value="1" />
+          <entry key="project.closed" value="8" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.14" value="1" />
           <entry key="project.open.time.2" value="2" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="1" />
-          <entry key="java" value="226" />
+          <entry key="java" value="286" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="1" />
-          <entry key="JAVA" value="226" />
+          <entry key="JAVA" value="286" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="65" />
-          <entry key="java" value="4958" />
+          <entry key="java" value="5694" />
           <entry key="txt" value="96" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="4958" />
+          <entry key="JAVA" value="5694" />
           <entry key="PLAIN_TEXT" value="161" />
         </counts>
       </usages-collector>
@@ -55,50 +72,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="132" column="31" lean-forward="true" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
+            <state relative-caret-position="2176">
+              <caret line="128" column="60" lean-forward="true" selection-start-line="128" selection-start-column="60" selection-end-line="128" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/expression/Sqrt.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="16" column="15" selection-start-line="16" selection-start-column="15" selection-end-line="16" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/expression/parser/MyTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/expression/High.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
-              <folding>
-                <element signature="e#206#207#0" expanded="true" />
-                <element signature="e#230#231#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -107,8 +87,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsHighLowTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="36" column="12" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="36" selection-end-column="12" />
+            <state relative-caret-position="87">
+              <caret line="14" column="61" lean-forward="true" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
               <folding>
                 <element signature="e#1317#1318#0" expanded="true" />
                 <element signature="e#1370#1371#0" expanded="true" />
@@ -116,20 +96,18 @@
                 <element signature="e#1467#1468#0" expanded="true" />
                 <element signature="e#1519#1520#0" expanded="true" />
                 <element signature="e#1568#1569#0" expanded="true" />
-                <marker date="1549904061284" expanded="true" signature="812:1298" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/expression/Low.java">
+        <entry file="file://$PROJECT_DIR$/src/expression/parser/MyTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="238">
+              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
               <folding>
-                <element signature="e#204#205#0" expanded="true" />
-                <element signature="e#228#229#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -154,10 +132,18 @@
       <find>NOT</find>
       <find>add</find>
       <find>System.out.print</find>
+      <find>LP</find>
+      <find>RP</find>
+      <find>res</find>
+      <find>unrese</find>
+      <find>parse</find>
+      <find>Syste</find>
     </findStrings>
     <replaceStrings>
       <replace>NEGATE</replace>
       <replace>st.append</replace>
+      <replace>OPEN_BRACE</replace>
+      <replace>CLOSE_BRACE</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -171,13 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/expression/parser/Parser.java" />
-        <option value="$PROJECT_DIR$/src/expression/parser/ParserException.java" />
-        <option value="$PROJECT_DIR$/src/expression/Exceptions/OverflowException.java" />
-        <option value="$PROJECT_DIR$/src/expression/Exceptions/IllegalOperationException.java" />
-        <option value="$PROJECT_DIR$/src/expression/Or.java" />
-        <option value="$PROJECT_DIR$/src/expression/Xor.java" />
-        <option value="$PROJECT_DIR$/src/expression/BinaryOperation.java" />
         <option value="$PROJECT_DIR$/src/expression/Add.java" />
         <option value="$PROJECT_DIR$/src/expression/And.java" />
         <option value="$PROJECT_DIR$/src/expression/Multiply.java" />
@@ -190,11 +169,9 @@
         <option value="$PROJECT_DIR$/src/expression/CheckedSubtract.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/MissingOperandException.java" />
         <option value="$PROJECT_DIR$/src/expression/CommonExpression.java" />
-        <option value="$PROJECT_DIR$/src/expression/exceptions/ExceptionsTest.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/BracketsException.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/MissingOperatorException.java" />
         <option value="$PROJECT_DIR$/src/expression/CheckedMultiply.java" />
-        <option value="$PROJECT_DIR$/src/expression/CheckedNegate.java" />
         <option value="$PROJECT_DIR$/src/expression/UnaryOperation.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/ExceptionsAbsSqrtTest.java" />
         <option value="$PROJECT_DIR$/src/expression/Abs.java" />
@@ -211,16 +188,26 @@
         <option value="$PROJECT_DIR$/src/expression/Log.java" />
         <option value="$PROJECT_DIR$/src/expression/ExceptionsPowLog2Test.java" />
         <option value="$PROJECT_DIR$/src/expression/Pow.java" />
-        <option value="$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTest.java" />
         <option value="$PROJECT_DIR$/src/expression/CheckedAdd.java" />
         <option value="$PROJECT_DIR$/src/expression/Sqrt.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/Log.java" />
         <option value="$PROJECT_DIR$/src/expression/parser/Log.java" />
+        <option value="$PROJECT_DIR$/src/expression/High.java" />
+        <option value="$PROJECT_DIR$/src/base/Asserts.java" />
+        <option value="$PROJECT_DIR$/src/base/MainChecker.java" />
+        <option value="$PROJECT_DIR$/src/base/TestCounter.java" />
+        <option value="$PROJECT_DIR$/src/base/Triple.java" />
+        <option value="$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTest.java" />
+        <option value="$PROJECT_DIR$/src/base/Either.java" />
+        <option value="$PROJECT_DIR$/src/expression/Low.java" />
+        <option value="$PROJECT_DIR$/src/expression/CheckedNegate.java" />
+        <option value="$PROJECT_DIR$/src/expression/exceptions/ExceptionsTest.java" />
+        <option value="$PROJECT_DIR$/src/expression/BaseTest.java" />
+        <option value="$PROJECT_DIR$/src/expression/parser/Either.java" />
+        <option value="$PROJECT_DIR$/src/expression/parser/ParserTest.java" />
         <option value="$PROJECT_DIR$/src/expression/exceptions/ExceptionsHighLowTest.java" />
         <option value="$PROJECT_DIR$/src/expression/parser/MyTest.java" />
         <option value="$PROJECT_DIR$/src/expression/parser/ExpressionParser.java" />
-        <option value="$PROJECT_DIR$/src/expression/Low.java" />
-        <option value="$PROJECT_DIR$/src/expression/High.java" />
       </list>
     </option>
   </component>
@@ -241,6 +228,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,47 +252,30 @@
               <item name="Homework 12" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Homework 12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Homework 12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="expression" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Homework 12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Homework 12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="expression" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Homework 12" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Homework 12" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="expression" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549904692576" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549986522871" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="expression.parser" />
+      <recent name="expression.exceptions" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="expression.exceptions" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -323,19 +294,7 @@
     <configuration name="ExceptionsHighLowTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="expression.exceptions.ExceptionsHighLowTest" />
       <module name="Homework 12" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="expression.exceptions.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ExceptionsMinMaxTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="expression.exceptions.ExceptionsMinMaxTest" />
-      <module name="Homework 12" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="expression.exceptions.*" />
@@ -349,6 +308,7 @@
     <configuration name="ExceptionsPowLog2Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="expression.exceptions.ExceptionsPowLog2Test" />
       <module name="Homework 12" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="expression.exceptions.*" />
@@ -362,6 +322,7 @@
     <configuration name="ExceptionsTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="expression.exceptions.ExceptionsTest" />
       <module name="Homework 12" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="expression.exceptions.*" />
@@ -375,9 +336,10 @@
     <configuration name="MyTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="expression.parser.MyTest" />
       <module name="Homework 12" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="expression.parser.*" />
+          <option name="PATTERN" value="expression.exceptions.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -388,17 +350,15 @@
     <list>
       <item itemvalue="Application.MyTest" />
       <item itemvalue="Application.ExceptionsTest" />
-      <item itemvalue="Application.ExceptionsMinMaxTest" />
       <item itemvalue="Application.ExceptionsPowLog2Test" />
       <item itemvalue="Application.ExceptionsHighLowTest" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.ExceptionsHighLowTest" />
-        <item itemvalue="Application.MyTest" />
-        <item itemvalue="Application.ExceptionsMinMaxTest" />
-        <item itemvalue="Application.ExceptionsPowLog2Test" />
         <item itemvalue="Application.ExceptionsTest" />
+        <item itemvalue="Application.MyTest" />
+        <item itemvalue="Application.ExceptionsPowLog2Test" />
       </list>
     </recent_temporary>
   </component>
@@ -417,7 +377,10 @@
       <workItem from="1545127900485" duration="148000" />
       <workItem from="1545748421803" duration="2561000" />
       <workItem from="1549899273803" duration="571000" />
-      <workItem from="1549900760125" duration="2447000" />
+      <workItem from="1549900760125" duration="5692000" />
+      <workItem from="1549965444265" duration="40000" />
+      <workItem from="1549978384479" duration="5498000" />
+      <workItem from="1549984155586" duration="2058000" />
     </task>
     <task id="LOCAL-00001" summary="Hw 12">
       <created>1544480077428</created>
@@ -468,11 +431,27 @@
       <option name="project" value="LOCAL" />
       <updated>1549904664539</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="New modification">
+      <created>1549904700467</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1549904700467</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36067000" />
+    <option name="totallyTimeSpent" value="46908000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -483,7 +462,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" weight="0.23891273" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.21316166" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="1" weight="0.32891566" />
@@ -491,12 +470,12 @@
       <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
       <window_info anchor="bottom" id="Find" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.32891566" />
+      <window_info anchor="bottom" x="0" y="485" width="1398" height="273" id="Run" order="6" weight="0.37349397" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.32891566" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="bottom" id="TODO" order="11" weight="0.32891566" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
       <window_info anchor="right" id="Theme Preview" order="1" />
       <window_info anchor="right" id="Database" order="2" />
@@ -504,39 +483,10 @@
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info anchor="right" id="Palette" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="7" weight="0.24964234" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
+      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.3297568" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Designer" order="0" />
-      <window_info id="UI Designer" order="1" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.23891273" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" order="0" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32891566" />
-      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.32891566" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="8" weight="0.32891566" />
-      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="11" />
-      <window_info anchor="right" id="Capture Analysis" order="0" />
-      <window_info anchor="right" id="Theme Preview" order="1" />
-      <window_info anchor="right" id="Database" order="2" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="right" id="Palette" order="5" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="7" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -551,32 +501,11 @@
     <MESSAGE value="New modification" />
     <option name="LAST_COMMIT_MESSAGE" value="New modification" />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/Throwable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-11203">
-          <caret line="113" column="13" selection-start-line="113" selection-start-column="13" selection-end-line="113" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/parser/ParserNotCountTest.java" />
-    <entry file="file://$PROJECT_DIR$/src/expression/Xor.java" />
-    <entry file="file://$PROJECT_DIR$/src/expression/Variable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/Or.java" />
-    <entry file="file://$PROJECT_DIR$/src/expression/DoubleExpression.java" />
-    <entry file="file://$PROJECT_DIR$/src/expression/TripleExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="44" lean-forward="true" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/Count.java" />
     <entry file="file://$PROJECT_DIR$/src/expression/And.java" />
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/lang/ArithmeticException.java">
@@ -594,25 +523,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/CommonExpression.java" />
-    <entry file="file://$PROJECT_DIR$/src/expression/UnaryOperation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="54" lean-forward="true" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/parser/ParcerNotCountTest.java" />
     <entry file="file://$PROJECT_DIR$/src/expression/exceptions/BracketsException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/UnknownSymbolException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
         </state>
       </provider>
     </entry>
@@ -666,21 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/parser/Parser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/Log.java" />
-    <entry file="file://$PROJECT_DIR$/src/expression/parser/ParserTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsAbsSqrtTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -695,55 +595,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="271">
-          <caret line="75" column="23" selection-start-line="75" selection-start-column="23" selection-end-line="75" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
-            <element signature="e#2131#2132#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/Homework 12/expression/exceptions/ExceptionsMinMaxTest.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-18" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/CheckedSubtract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ParsingException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/MissingArgumentException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
-          <folding>
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/out/production/Homework 12/expression/exceptions/ExceptionsMinMaxTest.class" />
     <entry file="file://$PROJECT_DIR$/src/expression/Min.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -758,16 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/Const.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -775,35 +617,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="649">
-          <caret line="67" column="19" selection-start-line="67" selection-start-column="19" selection-end-line="67" selection-end-column="19" />
-          <folding>
-            <element signature="e#1716#1717#0" expanded="true" />
-            <element signature="e#1756#1757#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/BinaryOperation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/CheckedNegate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/CheckedMultiply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
@@ -828,46 +645,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/Pow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/CheckedAdd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsHighLowTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="36" column="12" lean-forward="true" selection-start-line="21" selection-start-column="10" selection-end-line="36" selection-end-column="12" />
-          <folding>
-            <element signature="e#1317#1318#0" expanded="true" />
-            <element signature="e#1370#1371#0" expanded="true" />
-            <element signature="e#1415#1416#0" expanded="true" />
-            <element signature="e#1467#1468#0" expanded="true" />
-            <element signature="e#1519#1520#0" expanded="true" />
-            <element signature="e#1568#1569#0" expanded="true" />
-            <marker date="1549904061284" expanded="true" signature="812:1298" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/parser/MyTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -884,31 +665,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java">
+    <entry file="file://$PROJECT_DIR$/src/expression/CheckedMultiply.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="132" column="31" lean-forward="true" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
+        <state>
+          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/Asserts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="42" column="1" selection-start-line="42" selection-start-column="1" selection-end-line="42" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/expression/Low.java">
+    <entry file="file://$PROJECT_DIR$/src/base/Triple.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="235">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/MissingArgumentException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="51" selection-start-line="5" selection-start-column="51" selection-end-line="5" selection-end-column="51" />
           <folding>
-            <element signature="e#204#205#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
+            <element signature="e#207#208#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsMinMaxTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/base/TestCounter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="70" column="1" selection-start-line="70" selection-start-column="1" selection-end-line="70" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/expression/High.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="40" lean-forward="true" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
+        <state relative-caret-position="340">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="e#206#207#0" expanded="true" />
             <element signature="e#230#231#0" expanded="true" />
@@ -916,5 +719,295 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/Low.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+          <folding>
+            <element signature="e#204#205#0" expanded="true" />
+            <element signature="e#228#229#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/UnknownSymbolException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding>
+            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#235#236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/CheckedSubtract.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/UnaryOperation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/Randomized.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-193">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/CheckedNegate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/MainChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1394">
+          <caret line="94" column="1" selection-start-line="94" selection-start-column="1" selection-end-line="94" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/base/MainFilesChecker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_181.jdk/Contents/Home/src.zip!/java/util/function/BiFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="52" column="6" selection-start-line="52" selection-start-column="6" selection-end-line="52" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/parser/ParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1320">
+          <caret line="81" column="16" selection-start-line="81" selection-start-column="16" selection-end-line="81" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2409#2410#0" expanded="true" />
+            <element signature="e#2447#2448#0" expanded="true" />
+            <element signature="e#5951#5952#0" expanded="true" />
+            <element signature="e#6009#6010#0" expanded="true" />
+            <element signature="e#7207#7208#0" expanded="true" />
+            <element signature="e#7269#7270#0" expanded="true" />
+            <element signature="e#8336#8337#0" expanded="true" />
+            <element signature="e#8384#8385#0" expanded="true" />
+            <element signature="e#8775#8776#0" expanded="true" />
+            <element signature="e#8829#8830#0" expanded="true" />
+            <element signature="e#9290#9291#0" expanded="true" />
+            <element signature="e#9336#9337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/Parser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="6" column="42" selection-start-line="6" selection-start-column="42" selection-end-line="6" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/parser/Either.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="436">
+          <caret line="64" column="1" selection-start-line="64" selection-start-column="1" selection-end-line="64" selection-end-column="1" />
+          <folding>
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#741#742#0" expanded="true" />
+            <element signature="e#784#785#0" expanded="true" />
+            <element signature="e#841#842#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+            <element signature="e#1234#1235#0" expanded="true" />
+            <element signature="e#1278#1279#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1378#1379#0" expanded="true" />
+            <element signature="e#1435#1436#0" expanded="true" />
+            <element signature="e#1478#1479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ParsingException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2246#2247#0" expanded="true" />
+            <element signature="e#2478#2479#0" expanded="true" />
+            <element signature="e#2520#2521#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/BaseTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#703#704#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#812#813#0" expanded="true" />
+            <element signature="e#852#853#0" expanded="true" />
+            <element signature="e#1123#1124#0" expanded="true" />
+            <element signature="e#1183#1184#0" expanded="true" />
+            <element signature="e#1644#1645#0" expanded="true" />
+            <element signature="e#1684#1685#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/Pow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/exceptions/ExceptionsHighLowTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="14" column="61" lean-forward="true" selection-start-line="14" selection-start-column="61" selection-end-line="14" selection-end-column="61" />
+          <folding>
+            <element signature="e#1317#1318#0" expanded="true" />
+            <element signature="e#1370#1371#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#1467#1468#0" expanded="true" />
+            <element signature="e#1519#1520#0" expanded="true" />
+            <element signature="e#1568#1569#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/parser/MyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/expression/parser/ExpressionParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2176">
+          <caret line="128" column="60" lean-forward="true" selection-start-line="128" selection-start-column="60" selection-end-line="128" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Homework 12</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

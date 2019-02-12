@@ -1,9 +1,8 @@
 package expression.exceptions;
 
-import base.Either;
 import expression.*;
+import expression.parser.Either;
 import expression.parser.ExpressionParser;
-import expression.parser.Parser;
 import expression.parser.ParserTest;
 
 import java.util.ArrayList;
@@ -47,8 +46,22 @@ public class ExceptionsTest extends ParserTest {
             op("Middle symbol", "x @ * y"),
             op("End symbol", "x * y@"),
             op("Constant overflow 1", Integer.MIN_VALUE - 1L + ""),
-            op("Constant overflow 2", Integer.MAX_VALUE + 1L + "")
+            op("Constant overflow 2", Integer.MAX_VALUE + 1L + ""),
+            op("Bare +", "+"),
+            op("Bare -", "-"),
+            op("Bare a", "a"),
+            op("(())", "(())")
     ));
+
+    public static Op<String> parseExample(final String hello) {
+        return op(hello, hello);
+    }
+
+    protected void addParsingTests(final String... examples) {
+        for (final String example : examples) {
+            parsingTest.add(parseExample(example));
+        }
+    }
 
     public static void main(final String[] args) {
         new ExceptionsTest().run();

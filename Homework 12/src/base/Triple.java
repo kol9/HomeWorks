@@ -4,11 +4,11 @@ package base;
  * @author Georgiy Korneev (kgeorgiy@kgeorgiy.info)
  */
 public class Triple<F, S, T> {
-    public final F first;
-    public final S second;
+    private final F first;
+    private final S second;
     private final T third;
 
-    private Triple(final F first, final S second, final T third) {
+    public Triple(final F first, final S second, final T third) {
         this.first = first;
         this.second = second;
         this.third = third;

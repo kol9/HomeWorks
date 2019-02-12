@@ -21,9 +21,6 @@ public abstract strictfp class BaseTest extends Asserts {
         checkAssert(getClass());
     }
 
-    private void checkAssert(Class<? extends BaseTest> aClass) {
-    }
-
     public static String repeat(final String s, final int n) {
         return Stream.generate(() -> s).limit(n).collect(Collectors.joining());
     }

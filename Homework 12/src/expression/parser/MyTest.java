@@ -1,7 +1,6 @@
 package expression.parser;
 
 import expression.exceptions.EvaluateException;
-import expression.TripleExpression;
 import expression.exceptions.ParsingException;
 
 
@@ -13,14 +12,15 @@ public class MyTest {
         ExpressionParser parser = new ExpressionParser();
         int x = 5;
         try {
-            String s = "low(18)";
+            String s = "highx";
             try {
-                System.out.println(parser.parse(s).evaluate(5, 1, 1));
+                System.out.println(parser.parse(s).evaluate(-4, 1, 1));
             } catch (EvaluateException | ParsingException e) {
                 e.printStackTrace();
             }
+
         } catch (NumberFormatException e) {
-            System.out.println("Not integer number");
+            e.printStackTrace();
         }
 
     }

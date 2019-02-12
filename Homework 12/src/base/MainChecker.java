@@ -10,14 +10,16 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 /**
  * @author Georgiy Korneev (kgeorgiy@kgeorgiy.info)
  */
-public class MainChecker extends Randomized {
+public class MainChecker {
     public static final String ENCODING = "utf8";
     private final Method method;
     protected final TestCounter counter = new TestCounter();
+    public final Random random = new Random(8045702385702345702L);
 
     public MainChecker(final String className) {
         try {
@@ -59,7 +61,7 @@ public class MainChecker extends Randomized {
         }
     }
 
-    private String join(final String[] input) {
+    private static String join(final String[] input) {
         final StringBuilder sb = new StringBuilder();
         for (final String s : input) {
             if (sb.length() > 0) {
@@ -87,7 +89,7 @@ public class MainChecker extends Randomized {
         counter.printStatus(getClass());
     }
 
-    protected void write(final String file, final String contents) throws IOException {
+    protected static void write(final String file, final String contents) throws IOException {
         Files.write(Paths.get(file), contents.getBytes("UTF-8"), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 }

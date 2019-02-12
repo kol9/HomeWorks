@@ -20,9 +20,9 @@ public class ExpressionParser implements Parser {
 
 
     private enum Token {
-        ABS, ADD, BEGIN, DIV, END, LOG, LP,
+        ABS, ADD, BEGIN, DIV, END, LOG, OPEN_BRACE,
         MAX, MIN, MUL, NEGATE, NUMBER,
-        POW, RP, SQRT, SUB, VARIABLE,
+        POW, CLOSE_BRACE, SQRT, SUB, VARIABLE,
         HIGH, LOW
     }
 
@@ -42,19 +42,29 @@ public class ExpressionParser implements Parser {
     private void checkForOperand() throws MissingArgumentException {
         if (operations.contains(curToken)) {
             throw new MissingArgumentException("Expected argument: " + ErrorMessage(expression, index, false));
-        } else if (curToken == Token.LP || curToken == Token.BEGIN) {
+        } else if (curToken == Token.OPEN_BRACE || curToken == Token.BEGIN) {
             throw new MissingArgumentException("Expected argument: " + ErrorMessage(expression, index, false));
         }
 
     }
 
     private void checkForOperator() throws MissingOperatorException {
-        if (curToken == Token.RP || curToken == Token.VARIABLE || curToken == Token.NUMBER) {
+        if (curToken == Token.CLOSE_BRACE || curToken == Token.VARIABLE || curToken == Token.NUMBER) {
             throw new MissingOperatorException("Missed operator: " + ErrorMessage(expression, index, false));
         }
     }
 
-    private void nextToken() throws ParsingException {
+    private String getNumber() {
+        int l = index;
+        while (index < expression.length() && Character.isDigit(expression.charAt(index))) {
+            index++;
+        }
+        int r = index;
+        index--;
+        return expression.substring(l, r);
+    }
+
+    private void nextToken() throws ParsingException, OverflowException {
         skipWhiteSpaces();
         if (index >= expression.length()) {
             curToken = Token.END;
@@ -64,14 +74,25 @@ public class ExpressionParser implements Parser {
         char ch = expression.charAt(index);
         switch (ch) {
             case '-':
-                if (curToken == Token.NUMBER || curToken == Token.VARIABLE || curToken == Token.RP) {
+                if (curToken == Token.NUMBER || curToken == Token.VARIABLE || curToken == Token.CLOSE_BRACE) {
                     checkForOperand();
                     curToken = Token.SUB;
                 } else {
                     if (index + 1 >= expression.length()) {
                         throw new MissingArgumentException("Expected argument:" + ErrorMessage(expression, index, false));
                     }
-                    curToken = Token.NEGATE;
+                    if (Character.isDigit(expression.charAt(index + 1))) {
+                        index++;
+                        String temp = getNumber();
+                        try {
+                            value = Integer.parseInt("-" + temp);
+                        } catch (NumberFormatException e) {
+                            throw new OverflowException();
+                        }
+                        curToken = Token.NUMBER;
+                    } else {
+                        curToken = Token.NEGATE;
+                    }
                 }
                 break;
             case '+':
@@ -89,37 +110,35 @@ public class ExpressionParser implements Parser {
             case '(':
                 checkForOperator();
                 balance++;
-                curToken = Token.LP;
+                curToken = Token.OPEN_BRACE;
                 break;
             case ')':
-                if (operations.contains(curToken) || curToken == Token.LP) {
+                if (operations.contains(curToken) || curToken == Token.OPEN_BRACE) {
                     throw new MissingArgumentException("Expected argument: " + ErrorMessage(expression, index, false));
                 }
                 balance--;
                 if (balance < 0) throw new BracketsException("Wrong brackets sequence");
-                curToken = Token.RP;
+                curToken = Token.CLOSE_BRACE;
                 break;
             default:
                 if (Character.isDigit(ch)) {
                     checkForOperator();
-                    int l = index;
-                    while (index < expression.length() && Character.isDigit(expression.charAt(index))) {
-                        index++;
+                    String curNumber = getNumber();
+                    index++;
+                    try {
+                        value = Integer.parseInt(curNumber);
+                    } catch (NumberFormatException e) {
+                        throw new OverflowException();
                     }
-                    int r = index;
-                    if (index == expression.length()) {
-                        index++;
-                    }
-                    value = Integer.parseUnsignedInt(expression.substring(l, r));
                     curToken = Token.NUMBER;
                     index--;
                 } else if (ch == 'x' || ch == 'y' || ch == 'z') {
                     varName = String.valueOf(ch);
                     curToken = Token.VARIABLE;
-                } else if (index + 3 < expression.length() && expression.substring(index, index + 4).equals("high")) {
+                } else if (index + 3 < expression.length() && expression.substring(index, index + 4).equals("high") && !Character.isLetter(expression.charAt(index + 4))) {
                     curToken = Token.HIGH;
                     index += 3;
-                } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("low")) {
+                } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("low") && !Character.isLetter(expression.charAt(index + 3))) {
                     curToken = Token.LOW;
                     index += 2;
                 } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("abs")) {
@@ -166,7 +185,7 @@ public class ExpressionParser implements Parser {
         index++;
     }
 
-    private TripleExpression unary() throws ParsingException {
+    private TripleExpression unary() throws ParsingException, OverflowException {
         nextToken();
         TripleExpression res;
         switch (curToken) {
@@ -199,18 +218,21 @@ public class ExpressionParser implements Parser {
             case LOW:
                 res = new Low(unary());
                 break;
-            case LP:
+            case OPEN_BRACE:
                 res = minMax();
+                if (curToken != Token.CLOSE_BRACE) {
+                    throw new BracketsException("Wrong brackets sequence");
+                }
                 nextToken();
                 break;
             default:
-                return new Const(0);
+                throw new MissingArgumentException("Expected argument: " + ErrorMessage(expression, index, true));
 
         }
         return res;
     }
 
-    private TripleExpression mulDiv() throws ParsingException {
+    private TripleExpression mulDiv() throws ParsingException, OverflowException {
         TripleExpression res = unary();
         do {
             switch (curToken) {
@@ -226,7 +248,7 @@ public class ExpressionParser implements Parser {
         } while (true);
     }
 
-    private TripleExpression addSub() throws ParsingException {
+    private TripleExpression addSub() throws ParsingException, OverflowException {
         TripleExpression res = mulDiv();
         do {
             switch (curToken) {
@@ -243,7 +265,7 @@ public class ExpressionParser implements Parser {
         } while (true);
     }
 
-    private TripleExpression minMax() throws ParsingException {
+    private TripleExpression minMax() throws ParsingException, OverflowException {
         TripleExpression res = addSub();
         do {
             switch (curToken) {
@@ -261,7 +283,7 @@ public class ExpressionParser implements Parser {
     }
 
 
-    public TripleExpression parse(String expression) throws ParsingException {
+    public TripleExpression parse(String expression) throws ParsingException, OverflowException {
         index = 0;
         this.expression = expression;
         curToken = Token.BEGIN;

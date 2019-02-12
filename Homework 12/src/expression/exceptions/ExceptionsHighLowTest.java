@@ -19,22 +19,22 @@ public class ExceptionsHighLowTest extends ExceptionsTest {
                 op("low(x * y * z)", (x, y, z) -> low(x * y * z)),
                 op("high(x + y + z)", (x, y, z) -> high(x + y + z))
         ));
-//        addParsingTests(
-//                "hello",
-//                "   high    ",
-//                "high  ()",
-//                "high(    )",
-//                " high (1, 2)",
-//                "high(  *  )",
-//                "high(  \\  )",
-//                "abb 1",
-//                "    abb 1    ",
-//                "please, do not display too much context",
-//                "high *",
-//                "highx",
-//                "highx 10",
-//                "lоw 4"
-//        );
+        addParsingTests(
+                "hello",
+                "   high    ",
+                "high  ()",
+                "high(    )",
+                " high (1, 2)",
+                "high(  *  )",
+                "high(  \\  )",
+                "abb 1",
+                "    abb 1    ",
+                "please, do not display too much context",
+                "high *",
+                "highx",
+                "highx 10",
+                "lоw 4"
+        );
     }
 
     private static long high(final long v) {
