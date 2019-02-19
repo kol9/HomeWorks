@@ -12,7 +12,7 @@ public class MyTest {
         ExpressionParser parser = new ExpressionParser();
         int x = 5;
         try {
-            String s = "highx";
+            String s = "high  6";
             try {
                 System.out.println(parser.parse(s).evaluate(-4, 1, 1));
             } catch (EvaluateException | ParsingException e) {

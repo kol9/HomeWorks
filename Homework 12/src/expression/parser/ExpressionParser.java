@@ -7,7 +7,7 @@ import expression.exceptions.*;
 import java.util.EnumSet;
 import java.util.Set;
 
-import static expression.exceptions.ParsingException.ErrorMessage;
+import static expression.exceptions.ParsingException.errorMessage;
 
 /**
  * Created by Nikolay Yarlychenko on 05/12/2018
@@ -41,16 +41,16 @@ public class ExpressionParser implements Parser {
 
     private void checkForOperand() throws MissingArgumentException {
         if (operations.contains(curToken)) {
-            throw new MissingArgumentException("Expected argument: " + ErrorMessage(expression, index, false));
+            throw new MissingArgumentException("Expected argument: " + errorMessage(expression, index, false));
         } else if (curToken == Token.OPEN_BRACE || curToken == Token.BEGIN) {
-            throw new MissingArgumentException("Expected argument: " + ErrorMessage(expression, index, false));
+            throw new MissingArgumentException("Expected argument: " + errorMessage(expression, index, false));
         }
 
     }
 
     private void checkForOperator() throws MissingOperatorException {
         if (curToken == Token.CLOSE_BRACE || curToken == Token.VARIABLE || curToken == Token.NUMBER) {
-            throw new MissingOperatorException("Missed operator: " + ErrorMessage(expression, index, false));
+            throw new MissingOperatorException("Missed operator: " + errorMessage(expression, index, false));
         }
     }
 
@@ -79,7 +79,7 @@ public class ExpressionParser implements Parser {
                     curToken = Token.SUB;
                 } else {
                     if (index + 1 >= expression.length()) {
-                        throw new MissingArgumentException("Expected argument:" + ErrorMessage(expression, index, false));
+                        throw new MissingArgumentException("Expected argument:" + errorMessage(expression, index, false));
                     }
                     if (Character.isDigit(expression.charAt(index + 1))) {
                         index++;
@@ -114,7 +114,7 @@ public class ExpressionParser implements Parser {
                 break;
             case ')':
                 if (operations.contains(curToken) || curToken == Token.OPEN_BRACE) {
-                    throw new MissingArgumentException("Expected argument: " + ErrorMessage(expression, index, false));
+                    throw new MissingArgumentException("Expected argument: " + errorMessage(expression, index, false));
                 }
                 balance--;
                 if (balance < 0) throw new BracketsException("Wrong brackets sequence");
@@ -144,7 +144,7 @@ public class ExpressionParser implements Parser {
                 } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("abs")) {
                     curToken = Token.ABS;
                     index += 2;
-                } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("min")) {
+                } else if (index + 2 < expression.length() && expression.substring(index, index + 3).equals("min")) { // в одну функцию
                     curToken = Token.MIN;
                     index += 2;
                 } else if (index + 3 < expression.length() && expression.substring(index, index + 4).equals("log2")) {
@@ -161,12 +161,12 @@ public class ExpressionParser implements Parser {
                     index += 3;
                 } else {
                     if (index == expression.length() - 1) {
-                        throw new UnknownSymbolException("Unknown symbol \'" + expression.charAt(index) + "\' : " + ErrorMessage(expression, index - 1, true));
+                        throw new UnknownSymbolException("Unknown symbol \'" + expression.charAt(index) + "\' : " + errorMessage(expression, index - 1, true));
                     }
                     char nextChar = expression.charAt(++index);
 
                     if (nextChar == ' ' || index == expression.length() - 1) {
-                        throw new UnknownSymbolException("Unknown symbol \'" + expression.charAt(index - 1) + "\' : " + ErrorMessage(expression, index - 1, true));
+                        throw new UnknownSymbolException("Unknown symbol \'" + expression.charAt(index - 1) + "\' : " + errorMessage(expression, index - 1, true));
                     } else {
                         StringBuilder sb = new StringBuilder();
                         sb.append(expression.charAt(index - 1));
@@ -226,7 +226,7 @@ public class ExpressionParser implements Parser {
                 nextToken();
                 break;
             default:
-                throw new MissingArgumentException("Expected argument: " + ErrorMessage(expression, index, true));
+                throw new MissingArgumentException("Expected argument: " + errorMessage(expression, index, true));
 
         }
         return res;

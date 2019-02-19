@@ -13,7 +13,7 @@ public class ParsingException extends Exception{
         super(expression);
     }
 
-    public static String ErrorMessage(String expression, int index, boolean isSkipped) {
+    public static String errorMessage(String expression, int index, boolean isSkipped) {
         StringBuilder sb = new StringBuilder();
 
         for(int i = 0; i < index; i++) {

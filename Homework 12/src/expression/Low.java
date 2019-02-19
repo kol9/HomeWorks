@@ -11,11 +11,11 @@ public class Low extends UnaryOperation {
         super(x);
     }
 
-    int operation(int x) throws EvaluateException {
+    int operation(int x) {
         return Integer.lowestOneBit(x);
     }
 
-    void check(int x) throws EvaluateException {
+    void check(int x) {
 
     }
 }
