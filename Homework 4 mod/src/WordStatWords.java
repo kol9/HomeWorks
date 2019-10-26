@@ -5,9 +5,7 @@ import java.util.Set;
 
 public class WordStatWords {
     public static void main(String[] args) {
-
         try {
-
             File in = new File(args[0]);
             //in.createNewFile();
 
